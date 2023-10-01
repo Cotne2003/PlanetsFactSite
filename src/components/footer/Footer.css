@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    margin-top: 8.7rem;
+    padding-bottom: 5.6rem;
+}
+
+@media (max-width: 1024px) {
+    footer {
+        gap: 1%;
+        padding-bottom: 3.6rem;
+    }
+}

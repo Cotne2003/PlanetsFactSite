@@ -1,0 +1,143 @@
+main {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin-top: 12.6rem;
+    transition: 2s ease;
+}
+
+.left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.geology {
+    width: 16.3rem;
+    bottom: 3rem;
+    position: absolute;
+}
+
+.right-side {
+    width: 35rem;
+}
+
+.planet-title {
+    color: #FFF;
+    font-family: Antonio;
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.planet-about {
+    color: #ffffffa9;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.5rem;
+    margin-top: 2.3rem;
+    height: 12.5rem;
+}
+
+.source {
+    color: #ffffff7e;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2.4rem;
+}
+
+.source a {
+    opacity: 0.5;
+    color: #FFF;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.4rem;
+    gap: 1.6rem;
+}
+
+.buttons-container button {
+    background-color: inherit;
+    border: solid 1px rgba(255, 255, 255, 0.199);
+    cursor: pointer;
+    height: 4.8rem;
+    display: flex;
+    gap: 2.8rem;
+    padding: 1.2rem 2.8rem 1.1rem;
+    color: #FFF;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 2.571px;
+    text-transform: uppercase;
+}
+
+.buttons-container .clicked {
+    background-color: #419EBB;
+}
+
+.buttons-container button span {
+    opacity: 0.5;
+}
+
+.buttons-container button:hover {
+    background-color: rgba(217, 217, 217, 0.336);
+}
+
+.buttons-container .clicked:hover {
+    background-color: #419EBB;
+}
+
+@media (max-width: 1024px) {
+    main {
+        display: block;
+    }
+
+    .right-side {
+        display: flex;
+        margin-top: 13rem;
+        justify-content: space-around;
+    }
+
+    .left-side {
+        margin-top: 14.6rem;
+    }
+
+    .right-side {
+        width: auto;
+    }
+
+    .planet-title {
+        font-size: 4.8rem;
+    }
+
+    .planet-about {
+        font-size: 1.1rem;
+        width: 28rem;
+    }
+
+    .source {
+        font-size: 1.2rem;
+        margin-top: 3.2rem;
+    }
+
+    .buttons-container button {
+        font-size: 0.9rem;
+    }
+}
