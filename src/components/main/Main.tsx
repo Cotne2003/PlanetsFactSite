@@ -22,10 +22,49 @@ function Main(props: mainProps) {
                 : ""
             }
             alt="mercury"
-            className="planet"
+            className={
+              props.choosePlanet === 1
+                ? "planet-mercury"
+                : props.choosePlanet === 2
+                ? "planet-venus"
+                : props.choosePlanet === 3
+                ? "planet-earth"
+                : props.choosePlanet === 4
+                ? "planet-mars"
+                : props.choosePlanet === 5
+                ? "planet-jupiter"
+                : props.choosePlanet === 6
+                ? "planet-saturn"
+                : props.choosePlanet === 7
+                ? "planet-uranus"
+                : props.choosePlanet === 8
+                ? "planet-neptune"
+                : ""
+            }
           />
           {planetAbout === 3 ? (
-            <img src={props.imgGeology} className="geology"></img>
+            <img
+              src={props.imgGeology}
+              className={
+                props.choosePlanet === 1
+                  ? "geology-mercury"
+                  : props.choosePlanet === 2
+                  ? "geology-venus"
+                  : props.choosePlanet === 3
+                  ? "geology-earth"
+                  : props.choosePlanet === 4
+                  ? "geology-mars"
+                  : props.choosePlanet === 5
+                  ? "geology-jupiter"
+                  : props.choosePlanet === 6
+                  ? "geology-saturn"
+                  : props.choosePlanet === 7
+                  ? "geology-uranus"
+                  : props.choosePlanet === 8
+                  ? "geology-neptune"
+                  : ""
+              }
+            ></img>
           ) : null}
         </div>
         <div className="right-side">

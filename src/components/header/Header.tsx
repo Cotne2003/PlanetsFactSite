@@ -3,6 +3,7 @@ import "./Header.css";
 interface props {
   setChoosePlanet: (value: number) => void;
   choosePlanet: number;
+  slideHandleClick: () => void;
 }
 
 function Header(props: props) {

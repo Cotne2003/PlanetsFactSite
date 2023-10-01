@@ -106,6 +106,7 @@ const DATA = {
 }
 
 export interface mainProps {
+    choosePlanet: number;
     imgOverview: string;
     imgInternal: string;
     imgGeology: string;

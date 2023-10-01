@@ -6,12 +6,23 @@ import { useState } from "react";
 
 function App() {
   const [choosePlanet, setChoosePlanet] = useState(1);
+  const [leftSlide, setLeftSlide] = useState(false);
+  const slideHandleClick = () => {
+    setTimeout(() => {
+      setLeftSlide(!leftSlide);
+    }, 1000);
+  };
 
   return (
     <>
-      <Header setChoosePlanet={setChoosePlanet} choosePlanet={choosePlanet} />
+      <Header
+        setChoosePlanet={setChoosePlanet}
+        choosePlanet={choosePlanet}
+        slideHandleClick={slideHandleClick}
+      />
       {choosePlanet === 1 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.mercury.imgOverview}
           imgInternal={DATA.mercury.imgInternal}
           imgGeology={DATA.mercury.imgGeology}
@@ -26,6 +37,7 @@ function App() {
         />
       ) : choosePlanet === 2 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.venus.imgOverview}
           imgInternal={DATA.venus.imgInternal}
           imgGeology={DATA.venus.imgGeology}
@@ -40,6 +52,7 @@ function App() {
         />
       ) : choosePlanet === 3 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.earth.imgOverview}
           imgInternal={DATA.earth.imgInternal}
           imgGeology={DATA.earth.imgGeology}
@@ -54,6 +67,7 @@ function App() {
         />
       ) : choosePlanet === 4 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.mars.imgOverview}
           imgInternal={DATA.mars.imgInternal}
           imgGeology={DATA.mars.imgGeology}
@@ -68,6 +82,7 @@ function App() {
         />
       ) : choosePlanet === 5 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.jupiter.imgOverview}
           imgInternal={DATA.jupiter.imgInternal}
           imgGeology={DATA.jupiter.imgGeology}
@@ -82,6 +97,7 @@ function App() {
         />
       ) : choosePlanet === 6 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.saturn.imgOverview}
           imgInternal={DATA.saturn.imgInternal}
           imgGeology={DATA.saturn.imgGeology}
@@ -96,6 +112,7 @@ function App() {
         />
       ) : choosePlanet === 7 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.uranus.imgOverview}
           imgInternal={DATA.uranus.imgInternal}
           imgGeology={DATA.uranus.imgGeology}
@@ -110,6 +127,7 @@ function App() {
         />
       ) : choosePlanet === 7 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.uranus.imgOverview}
           imgInternal={DATA.uranus.imgInternal}
           imgGeology={DATA.uranus.imgGeology}
@@ -124,6 +142,7 @@ function App() {
         />
       ) : choosePlanet === 7 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.uranus.imgOverview}
           imgInternal={DATA.uranus.imgInternal}
           imgGeology={DATA.uranus.imgGeology}
@@ -138,6 +157,7 @@ function App() {
         />
       ) : choosePlanet === 7 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.uranus.imgOverview}
           imgInternal={DATA.uranus.imgInternal}
           imgGeology={DATA.uranus.imgGeology}
@@ -152,6 +172,7 @@ function App() {
         />
       ) : choosePlanet === 8 ? (
         <Main
+          choosePlanet={choosePlanet}
           imgOverview={DATA.neptune.imgOverview}
           imgInternal={DATA.neptune.imgInternal}
           imgGeology={DATA.neptune.imgGeology}

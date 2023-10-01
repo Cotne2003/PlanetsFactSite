@@ -5,6 +5,14 @@ main {
     transition: 2s ease;
 }
 
+.left-slide {
+    transform: translatex(-1000px);
+}
+
+.right-slide {
+    transform: translatex(0);
+}
+
 .left-side {
     display: flex;
     justify-content: center;
@@ -12,9 +20,83 @@ main {
     position: relative;
 }
 
-.geology {
+.planet-mercury {
+    width: 29rem;
+}
+
+.planet-venus {
+    width: 40rem;
+}
+
+.planet-earth {
+    width: 45rem;
+}
+
+.planet-mars {
+    width: 33.6rem;
+}
+
+.planet-jupiter {
+    width: 52rem;
+}
+
+.planet-saturn {
+    width: 52rem;
+}
+
+.planet-uranus {
+    width: 45.8rem;
+}
+
+.planet-neptune {
+    width: 45rem;
+}
+
+.geology-mercury {
     width: 16.3rem;
     bottom: 3rem;
+    position: absolute;
+}
+
+.geology-venus {
+    width: 16.3rem;
+    bottom: -1rem;
+    position: absolute;
+}
+
+.geology-earth {
+    width: 16.3rem;
+    bottom: -2rem;
+    position: absolute;
+}
+
+.geology-mars {
+    width: 16.3rem;
+    bottom: -1rem;
+    position: absolute;
+}
+
+.geology-jupiter {
+    width: 16.3rem;
+    bottom: 1rem;
+    position: absolute;
+}
+
+.geology-saturn {
+    width: 16.3rem;
+    bottom: 3rem;
+    position: absolute;
+}
+
+.geology-uranus {
+    width: 16.3rem;
+    bottom: -1rem;
+    position: absolute;
+}
+
+.geology-neptune {
+    width: 16.3rem;
+    bottom: -2rem;
     position: absolute;
 }
 
@@ -113,18 +195,88 @@ main {
         display: flex;
         margin-top: 13rem;
         justify-content: space-around;
+        width: auto;
     }
 
     .left-side {
         margin-top: 14.6rem;
+        height: 17rem;
     }
 
-    .right-side {
-        width: auto;
+    .planet-mercury {
+        width: 18.4rem;
+    }
+
+    .planet-venus {
+        width: 25.3rem;
+    }
+
+    .planet-earth {
+        width: 28.5rem;
+    }
+
+    .planet-mars {
+        width: 21.3rem;
+    }
+
+    .planet-jupiter {
+        width: 36.9rem;
+    }
+
+    .planet-saturn {
+        width: 35rem;
+    }
+
+    .planet-uranus {
+        width: 29rem;
+    }
+
+    .planet-neptune {
+        width: 28.5rem;
     }
 
     .planet-title {
         font-size: 4.8rem;
+    }
+
+    .geology-mercury {
+        width: 10rem;
+        bottom: -5rem;
+    }
+
+    .geology-venus {
+        width: 10rem;
+        bottom: -8rem;
+    }
+
+    .geology-earth {
+        width: 10rem;
+        bottom: -10rem;
+    }
+
+    .geology-mars {
+        width: 10rem;
+        bottom: -8rem;
+    }
+
+    .geology-jupiter {
+        width: 10rem;
+        bottom: -10rem;
+    }
+
+    .geology-saturn {
+        width: 10rem;
+        bottom: -5rem;
+    }
+
+    .geology-uranus {
+        width: 10rem;
+        bottom: -8rem;
+    }
+
+    .geology-neptune {
+        width: 10rem;
+        bottom: -10rem;
     }
 
     .planet-about {
