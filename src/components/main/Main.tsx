@@ -9,7 +9,7 @@ function Main(props: mainProps) {
 
   return (
     <>
-      <main>
+      <main className={props.leftSlide ? "left-slide" : ""}>
         <div className="left-side">
           <img
             src={

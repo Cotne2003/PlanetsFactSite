@@ -2,11 +2,11 @@ main {
     display: grid;
     grid-template-columns: 3fr 2fr;
     margin-top: 12.6rem;
-    transition: 2s ease;
+    transition: 1.5s ease;
 }
 
 .left-slide {
-    transform: translatex(-1000px);
+    transform: translatex(-1700px);
 }
 
 .right-slide {
