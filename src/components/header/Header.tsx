@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
+import navbarMenu from "/icon-hamburger.svg";
 
 interface props {
   setChoosePlanet: (value: number) => void;
@@ -13,6 +14,7 @@ function Header(props: props) {
   return (
     <header>
       <h1 className="logo">THE PLANETS</h1>
+      <img src={navbarMenu} alt="" className="navbar-menu-logo" />
       <ul>
         <div
           className={props.leftSlide ? "slider-block active" : "slider-block"}

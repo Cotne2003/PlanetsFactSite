@@ -6,6 +6,10 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.199);
 }
 
+.navbar-menu-logo {
+    display: none;
+}
+
 .logo {
     cursor: pointer;
     color: #FFF;
@@ -63,5 +67,22 @@ ul li:hover {
         flex-direction: column;
         justify-content: start;
         gap: 3.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .navbar-menu-logo {
+        display: block;
+        cursor: pointer;
     }
 }

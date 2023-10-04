@@ -10,6 +10,26 @@ function Main(props: mainProps) {
   return (
     <>
       <main className={props.leftSlide ? "left-slide" : ""}>
+        <div className="buttons-container-mobile">
+          <p
+            className={planetAbout === 1 ? "clicked-mobile" : ""}
+            onClick={() => setPlanetAbout(1)}
+          >
+            OVERVIEW
+          </p>
+          <p
+            className={planetAbout === 2 ? "clicked-mobile" : ""}
+            onClick={() => setPlanetAbout(2)}
+          >
+            STRUCTURE
+          </p>
+          <p
+            className={planetAbout === 3 ? "clicked-mobile" : ""}
+            onClick={() => setPlanetAbout(3)}
+          >
+            SURFACE
+          </p>
+        </div>
         <div className="left-side">
           <img
             src={
