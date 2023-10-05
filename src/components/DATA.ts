@@ -119,6 +119,7 @@ export interface mainProps {
     revolutionDescription: string;
     radiusDescription: string;
     averageDescription: string;
+    setMobileMenu: (value: boolean) => void;
 }
 
 export interface footerProps {

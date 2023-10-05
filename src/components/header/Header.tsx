@@ -7,6 +7,8 @@ interface props {
   choosePlanet: number;
   setLeftSlide: (value: boolean) => void;
   leftSlide: boolean;
+  mobileMenu: boolean;
+  setMobileMenu: (value: boolean) => void;
 }
 
 function Header(props: props) {
@@ -14,8 +16,19 @@ function Header(props: props) {
   return (
     <header>
       <h1 className="logo">THE PLANETS</h1>
-      <img src={navbarMenu} alt="" className="navbar-menu-logo" />
-      <ul>
+      <img
+        src={navbarMenu}
+        alt=""
+        className={
+          props.mobileMenu
+            ? "navbar-menu-logo menu-clicked"
+            : "navbar-menu-logo"
+        }
+        onClick={() => {
+          props.setMobileMenu(!props.mobileMenu);
+        }}
+      />
+      <ul className="navigation">
         <div
           className={props.leftSlide ? "slider-block active" : "slider-block"}
         ></div>
@@ -23,6 +36,7 @@ function Header(props: props) {
           className={planetHover === 1 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(1);
+            props.setMobileMenu(false);
             if (props.choosePlanet === 1) {
               return;
             }
@@ -41,6 +55,7 @@ function Header(props: props) {
           className={planetHover === 2 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(2);
+            props.setMobileMenu(false);
             if (props.choosePlanet === 2) {
               return;
             }
@@ -59,6 +74,7 @@ function Header(props: props) {
           className={planetHover === 3 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(3);
+            props.setMobileMenu(false);
             if (props.choosePlanet === 3) {
               return;
             }
@@ -77,6 +93,7 @@ function Header(props: props) {
           className={planetHover === 4 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(4);
+            props.setMobileMenu(false);
             if (props.choosePlanet === 4) {
               return;
             }
@@ -95,6 +112,7 @@ function Header(props: props) {
           className={planetHover === 5 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(5);
+            props.setMobileMenu(false);
             if (props.choosePlanet === 5) {
               return;
             }
@@ -113,6 +131,7 @@ function Header(props: props) {
           className={planetHover === 6 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(6);
+            props.setMobileMenu(false);
             if (props.choosePlanet === 6) {
               return;
             }
@@ -131,6 +150,7 @@ function Header(props: props) {
           className={planetHover === 7 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(7);
+            props.setMobileMenu(false);
             if (props.choosePlanet === 7) {
               return;
             }
@@ -149,6 +169,7 @@ function Header(props: props) {
           className={planetHover === 8 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(8);
+            props.setMobileMenu(false);
             if (props.choosePlanet === 8) {
               return;
             }

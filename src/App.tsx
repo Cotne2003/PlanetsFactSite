@@ -2,11 +2,13 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import DATA from "./components/DATA";
+import MobileMenu from "./components/mobile_menu/MobileMenu";
 import { useState } from "react";
 
 function App() {
   const [choosePlanet, setChoosePlanet] = useState(1);
   const [leftSlide, setLeftSlide] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
     <>
@@ -15,8 +17,15 @@ function App() {
         choosePlanet={choosePlanet}
         setLeftSlide={setLeftSlide}
         leftSlide={leftSlide}
+        mobileMenu={mobileMenu}
+        setMobileMenu={setMobileMenu}
       />
-      {choosePlanet === 1 ? (
+      {mobileMenu ? (
+        <MobileMenu
+          setChoosePlanet={setChoosePlanet}
+          setMobileMenu={setMobileMenu}
+        />
+      ) : choosePlanet === 1 ? (
         <Main
           leftSlide={leftSlide}
           choosePlanet={choosePlanet}
@@ -31,6 +40,7 @@ function App() {
           revolutionDescription={DATA.mercury.revolutionDescription}
           radiusDescription={DATA.mercury.radiusDescription}
           averageDescription={DATA.mercury.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 2 ? (
         <Main
@@ -47,6 +57,7 @@ function App() {
           revolutionDescription={DATA.venus.revolutionDescription}
           radiusDescription={DATA.venus.radiusDescription}
           averageDescription={DATA.venus.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 3 ? (
         <Main
@@ -63,6 +74,7 @@ function App() {
           revolutionDescription={DATA.earth.revolutionDescription}
           radiusDescription={DATA.earth.radiusDescription}
           averageDescription={DATA.earth.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 4 ? (
         <Main
@@ -79,6 +91,7 @@ function App() {
           revolutionDescription={DATA.mars.revolutionDescription}
           radiusDescription={DATA.mars.radiusDescription}
           averageDescription={DATA.mars.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 5 ? (
         <Main
@@ -95,6 +108,7 @@ function App() {
           revolutionDescription={DATA.jupiter.revolutionDescription}
           radiusDescription={DATA.jupiter.radiusDescription}
           averageDescription={DATA.jupiter.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 6 ? (
         <Main
@@ -111,6 +125,7 @@ function App() {
           revolutionDescription={DATA.saturn.revolutionDescription}
           radiusDescription={DATA.saturn.radiusDescription}
           averageDescription={DATA.saturn.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 7 ? (
         <Main
@@ -127,6 +142,7 @@ function App() {
           revolutionDescription={DATA.uranus.revolutionDescription}
           radiusDescription={DATA.uranus.radiusDescription}
           averageDescription={DATA.uranus.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 7 ? (
         <Main
@@ -143,6 +159,7 @@ function App() {
           revolutionDescription={DATA.uranus.revolutionDescription}
           radiusDescription={DATA.uranus.radiusDescription}
           averageDescription={DATA.uranus.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 7 ? (
         <Main
@@ -159,6 +176,7 @@ function App() {
           revolutionDescription={DATA.uranus.revolutionDescription}
           radiusDescription={DATA.uranus.radiusDescription}
           averageDescription={DATA.uranus.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 7 ? (
         <Main
@@ -175,6 +193,7 @@ function App() {
           revolutionDescription={DATA.uranus.revolutionDescription}
           radiusDescription={DATA.uranus.radiusDescription}
           averageDescription={DATA.uranus.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : choosePlanet === 8 ? (
         <Main
@@ -191,6 +210,7 @@ function App() {
           revolutionDescription={DATA.neptune.revolutionDescription}
           radiusDescription={DATA.neptune.radiusDescription}
           averageDescription={DATA.neptune.averageDescription}
+          setMobileMenu={setMobileMenu}
         />
       ) : null}
     </>

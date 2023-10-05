@@ -336,4 +336,12 @@ main {
         border-bottom: 3px solid #419EBB;
         transition: none;
     }
+
+    .description {
+        text-align: center;
+    }
+
+    .source {
+        justify-content: center;
+    }
 }

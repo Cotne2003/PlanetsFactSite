@@ -41,7 +41,7 @@ function Main(props: mainProps) {
                 ? props.imgOverview
                 : ""
             }
-            alt="mercury"
+            alt=""
             className={
               props.choosePlanet === 1
                 ? "planet-mercury"

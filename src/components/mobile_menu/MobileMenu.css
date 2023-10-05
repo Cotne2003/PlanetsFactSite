@@ -1,0 +1,38 @@
+.mobile-menu ul li img:nth-child(1) {
+    width: 2rem;
+}
+
+.mobile-menu {
+    background: #070724;
+    color: #FFF;
+    font-family: Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 1.364px;
+    text-transform: uppercase;
+}
+
+.mobile-menu ul {
+    padding: 0 3.2rem;
+}
+
+.mobile-menu ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.199);
+    padding: 2rem;
+}
+
+.mobile-menu ul li:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.mobile-menu ul li div {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
