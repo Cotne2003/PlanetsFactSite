@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import "./Main.css";
 import source from "/assets/icon-source.svg";
