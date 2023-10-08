@@ -1,13 +1,13 @@
 import "./MobileMenu.css";
-import mercury from "/planet-mercury.svg";
-import venus from "/planet-venus.svg";
-import earth from "/planet-earth.svg";
-import mars from "/planet-mars.svg";
-import jupiter from "/planet-jupiter.svg";
-import saturn from "/planet-saturn.svg";
-import uranus from "/planet-uranus.svg";
-import neptune from "/planet-neptune.svg";
-import vector from "/icon-chevron.svg";
+import mercury from "/assets/planet-mercury.svg";
+import venus from "/assets/planet-venus.svg";
+import earth from "/assets/planet-earth.svg";
+import mars from "/assets/planet-mars.svg";
+import jupiter from "/assets/planet-jupiter.svg";
+import saturn from "/assets/planet-saturn.svg";
+import uranus from "/assets/planet-uranus.svg";
+import neptune from "/assets/planet-neptune.svg";
+import vector from "/assets/icon-chevron.svg";
 
 interface props {
   setChoosePlanet: (value: number) => void;

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Header.css";
-import navbarMenu from "/icon-hamburger.svg";
+import navbarMenu from "/assets/icon-hamburger.svg";
+import { Link } from "react-router-dom";
 
 interface props {
   setChoosePlanet: (value: number) => void;
@@ -28,11 +29,12 @@ function Header(props: props) {
           props.setMobileMenu(!props.mobileMenu);
         }}
       />
-      <ul className="navigation">
+      <nav className="navigation">
         <div
           className={props.leftSlide ? "slider-block active" : "slider-block"}
         ></div>
-        <li
+        <Link
+          to={"/mercury"}
           className={planetHover === 1 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(1);
@@ -50,8 +52,9 @@ function Header(props: props) {
           }}
         >
           MERCURY
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/venus"}
           className={planetHover === 2 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(2);
@@ -69,8 +72,9 @@ function Header(props: props) {
           }}
         >
           VENUS
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/earth"}
           className={planetHover === 3 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(3);
@@ -88,8 +92,9 @@ function Header(props: props) {
           }}
         >
           EARTH
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/mars"}
           className={planetHover === 4 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(4);
@@ -107,8 +112,9 @@ function Header(props: props) {
           }}
         >
           MARS
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/jupiter"}
           className={planetHover === 5 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(5);
@@ -126,8 +132,9 @@ function Header(props: props) {
           }}
         >
           JUPITER
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/saturn"}
           className={planetHover === 6 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(6);
@@ -145,8 +152,9 @@ function Header(props: props) {
           }}
         >
           SATURN
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/uranus"}
           className={planetHover === 7 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(7);
@@ -164,8 +172,9 @@ function Header(props: props) {
           }}
         >
           URANUS
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/neptune"}
           className={planetHover === 8 ? "planet-clicked" : ""}
           onClick={() => {
             setPlanetHover(8);
@@ -183,8 +192,8 @@ function Header(props: props) {
           }}
         >
           NEPTUNE
-        </li>
-      </ul>
+        </Link>
+      </nav>
     </header>
   );
 }

@@ -1,11 +1,21 @@
+import React from "react";
 import { useState } from "react";
 import "./Main.css";
-import source from "/icon-source.svg";
-import { mainProps } from "../DATA";
+import source from "/assets/icon-source.svg";
 import Footer from "../footer/Footer";
+import { useParams } from "react-router-dom";
+import data from "../../../data.json";
 
-function Main(props: mainProps) {
+interface props {
+  leftSlide: boolean;
+}
+
+function Main(props: props) {
   const [planetAbout, setPlanetAbout] = useState(1);
+  const params = useParams();
+  const planetData = data.find(
+    (item) => item.name.toLocaleLowerCase() === params.planet
+  );
 
   return (
     <>
@@ -34,53 +44,53 @@ function Main(props: mainProps) {
           <img
             src={
               planetAbout === 1
-                ? props.imgOverview
+                ? planetData?.images.planet
                 : planetAbout === 2
-                ? props.imgInternal
+                ? planetData?.images.internal
                 : planetAbout === 3
-                ? props.imgOverview
+                ? planetData?.images.planet
                 : ""
             }
             alt=""
             className={
-              props.choosePlanet === 1
+              params.planet === "mercury"
                 ? "planet-mercury"
-                : props.choosePlanet === 2
+                : params.planet === "venus"
                 ? "planet-venus"
-                : props.choosePlanet === 3
+                : params.planet === "earth"
                 ? "planet-earth"
-                : props.choosePlanet === 4
+                : params.planet === "mars"
                 ? "planet-mars"
-                : props.choosePlanet === 5
+                : params.planet === "jupiter"
                 ? "planet-jupiter"
-                : props.choosePlanet === 6
+                : params.planet === "saturn"
                 ? "planet-saturn"
-                : props.choosePlanet === 7
+                : params.planet === "uranus"
                 ? "planet-uranus"
-                : props.choosePlanet === 8
+                : params.planet === "neptune"
                 ? "planet-neptune"
                 : ""
             }
           />
           {planetAbout === 3 ? (
             <img
-              src={props.imgGeology}
+              src={planetData?.images.geology}
               className={
-                props.choosePlanet === 1
+                params.planet === "mercury"
                   ? "geology-mercury"
-                  : props.choosePlanet === 2
+                  : params.planet === "venus"
                   ? "geology-venus"
-                  : props.choosePlanet === 3
+                  : params.planet === "earth"
                   ? "geology-earth"
-                  : props.choosePlanet === 4
+                  : params.planet === "mars"
                   ? "geology-mars"
-                  : props.choosePlanet === 5
+                  : params.planet === "jupiter"
                   ? "geology-jupiter"
-                  : props.choosePlanet === 6
+                  : params.planet === "saturn"
                   ? "geology-saturn"
-                  : props.choosePlanet === 7
+                  : params.planet === "uranus"
                   ? "geology-uranus"
-                  : props.choosePlanet === 8
+                  : params.planet === "neptune"
                   ? "geology-neptune"
                   : ""
               }
@@ -90,19 +100,32 @@ function Main(props: mainProps) {
         <div className="right-side">
           <div className="description-container">
             <div className="description">
-              <h1 className="planet-title">{props.title}</h1>
+              <h1 className="planet-title">{planetData?.name.toUpperCase()}</h1>
               <p className="planet-about">
                 {planetAbout === 1
-                  ? props.overview
+                  ? planetData?.overview.content
                   : planetAbout === 2
-                  ? props.internalStructure
+                  ? planetData?.structure.content
                   : planetAbout === 3
-                  ? props.surfaceGeology
+                  ? planetData?.geology.content
                   : ""}
               </p>
               <div className="source">
                 <p>
-                  Source : <a href="#">Wikipedia</a>
+                  Source :{" "}
+                  <a
+                    href={
+                      planetAbout === 1
+                        ? planetData?.overview.source
+                        : planetAbout === 2
+                        ? planetData?.structure.source
+                        : planetAbout === 3
+                        ? planetData?.geology.source
+                        : "#"
+                    }
+                  >
+                    Wikipedia
+                  </a>
                 </p>
                 <img src={source} />
               </div>
@@ -131,10 +154,10 @@ function Main(props: mainProps) {
         </div>
       </main>
       <Footer
-        rotationDescription={props.rotationDescription}
-        revolutionDescription={props.revolutionDescription}
-        radiusDescription={props.radiusDescription}
-        averageDescription={props.averageDescription}
+        rotationDescription={planetData?.rotation}
+        revolutionDescription={planetData?.revolution}
+        radiusDescription={planetData?.radius}
+        averageDescription={planetData?.temperature}
       />
     </>
   );
