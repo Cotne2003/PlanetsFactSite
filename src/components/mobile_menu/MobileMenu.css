@@ -1,4 +1,4 @@
-.mobile-menu ul li img:nth-child(1) {
+.mobile-menu ul a img:nth-child(1) {
     width: 2rem;
 }
 
@@ -18,20 +18,22 @@
     padding: 0 3.2rem;
 }
 
-.mobile-menu ul li {
+.mobile-menu ul a {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.199);
     padding: 2rem;
+    text-decoration: none;
+    color: #FFF;
 }
 
-.mobile-menu ul li:nth-last-child(1) {
+.mobile-menu ul a:nth-last-child(1) {
     border-bottom: none;
 }
 
-.mobile-menu ul li div {
+.mobile-menu ul a div {
     display: flex;
     align-items: center;
     gap: 2.5rem;

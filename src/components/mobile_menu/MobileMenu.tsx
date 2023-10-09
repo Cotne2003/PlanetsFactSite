@@ -8,6 +8,7 @@ import saturn from "/assets/planet-saturn.svg";
 import uranus from "/assets/planet-uranus.svg";
 import neptune from "/assets/planet-neptune.svg";
 import vector from "/assets/icon-chevron.svg";
+import { Link } from "react-router-dom";
 
 interface props {
   setChoosePlanet: (value: number) => void;
@@ -18,7 +19,8 @@ export default function MobileMenu(props: props) {
   return (
     <div className="mobile-menu">
       <ul>
-        <li
+        <Link
+          to={"/mercury"}
           onClick={() => {
             props.setChoosePlanet(1);
             props.setMobileMenu(false);
@@ -29,8 +31,9 @@ export default function MobileMenu(props: props) {
             <span>mercury</span>
           </div>
           <img src={vector} alt="" />
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/venus"}
           onClick={() => {
             props.setChoosePlanet(2);
             props.setMobileMenu(false);
@@ -41,8 +44,9 @@ export default function MobileMenu(props: props) {
             <span>venus</span>
           </div>
           <img src={vector} alt="" />
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/earth"}
           onClick={() => {
             props.setChoosePlanet(3);
             props.setMobileMenu(false);
@@ -53,8 +57,9 @@ export default function MobileMenu(props: props) {
             <span>earth</span>
           </div>
           <img src={vector} alt="" />
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/mars"}
           onClick={() => {
             props.setChoosePlanet(4);
             props.setMobileMenu(false);
@@ -65,8 +70,9 @@ export default function MobileMenu(props: props) {
             <span>mars</span>
           </div>
           <img src={vector} alt="" />
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/jupiter"}
           onClick={() => {
             props.setChoosePlanet(5);
             props.setMobileMenu(false);
@@ -77,8 +83,9 @@ export default function MobileMenu(props: props) {
             <span>jupiter</span>
           </div>
           <img src={vector} alt="" />
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/saturn"}
           onClick={() => {
             props.setChoosePlanet(6);
             props.setMobileMenu(false);
@@ -89,8 +96,9 @@ export default function MobileMenu(props: props) {
             <span>saturn</span>
           </div>
           <img src={vector} alt="" />
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/uranus"}
           onClick={() => {
             props.setChoosePlanet(7);
             props.setMobileMenu(false);
@@ -101,8 +109,9 @@ export default function MobileMenu(props: props) {
             <span>uranus</span>
           </div>
           <img src={vector} alt="" />
-        </li>
-        <li
+        </Link>
+        <Link
+          to={"/neptune"}
           onClick={() => {
             props.setChoosePlanet(8);
             props.setMobileMenu(false);
@@ -113,7 +122,7 @@ export default function MobileMenu(props: props) {
             <span>neptune</span>
           </div>
           <img src={vector} alt="" />
-        </li>
+        </Link>
       </ul>
     </div>
   );

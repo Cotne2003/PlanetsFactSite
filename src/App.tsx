@@ -27,11 +27,12 @@ function App() {
             setChoosePlanet={setChoosePlanet}
             setMobileMenu={setMobileMenu}
           />
-        ) : null}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/:planet" element={<Main leftSlide={leftSlide} />} />
-        </Routes>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:planet" element={<Main leftSlide={leftSlide} />} />
+          </Routes>
+        )}
       </BrowserRouter>
     </>
   );
