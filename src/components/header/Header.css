@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.2rem 4.1rem 2.7rem 3.2rem;
+    padding: 0 4.1rem 2.7rem 3.2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.199);
 }
 
@@ -15,6 +15,7 @@ header {
 }
 
 .logo {
+    margin-top: 2.2rem;
     cursor: pointer;
     color: #FFF;
     font-family: Antonio;
@@ -47,6 +48,7 @@ header {
 }
 
 .navigation a {
+    padding-top: 2.2rem;
     cursor: pointer;
     color: #FFF;
     font-size: 1.1rem;
@@ -57,6 +59,8 @@ header {
     text-transform: uppercase;
     opacity: 0.75;
     text-decoration: none;
+    border-top: 3px solid #070724;
+    transition: 0.3s ease-in-out;
 }
 
 .navigation a:hover {
@@ -65,6 +69,8 @@ header {
 
 .navigation .planet-clicked {
     opacity: 1;
+    transition: 0.3s ease-in-out;
+    border-top: 3px solid #419EBB;
 }
 
 @media (max-width: 1024px) {

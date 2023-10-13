@@ -42,14 +42,9 @@ function Header(props: props) {
             if (props.choosePlanet === 1) {
               return;
             }
-            setTimeout(() => {
-              props.setChoosePlanet(1);
-            }, 1500);
-            props.setLeftSlide(!props.leftSlide);
-            setTimeout(() => {
-              props.setLeftSlide(false);
-            }, 1500);
+
           }}
+          style={planetHover === 1 ? {borderTop: "3px solid #419EBB"} : {}}
         >
           MERCURY
         </Link>
@@ -62,14 +57,9 @@ function Header(props: props) {
             if (props.choosePlanet === 2) {
               return;
             }
-            setTimeout(() => {
-              props.setChoosePlanet(2);
-            }, 1500);
-            props.setLeftSlide(!props.leftSlide);
-            setTimeout(() => {
-              props.setLeftSlide(false);
-            }, 1500);
+
           }}
+          style={planetHover === 2 ? {borderTop: "3px solid #EDA249"} : {}}
         >
           VENUS
         </Link>
@@ -82,14 +72,9 @@ function Header(props: props) {
             if (props.choosePlanet === 3) {
               return;
             }
-            setTimeout(() => {
-              props.setChoosePlanet(3);
-            }, 1500);
-            props.setLeftSlide(!props.leftSlide);
-            setTimeout(() => {
-              props.setLeftSlide(false);
-            }, 1500);
+
           }}
+          style={planetHover === 3 ? {borderTop: "3px solid #6D2ED5"} : {}}
         >
           EARTH
         </Link>
@@ -102,14 +87,9 @@ function Header(props: props) {
             if (props.choosePlanet === 4) {
               return;
             }
-            setTimeout(() => {
-              props.setChoosePlanet(4);
-            }, 1500);
-            props.setLeftSlide(!props.leftSlide);
-            setTimeout(() => {
-              props.setLeftSlide(false);
-            }, 1500);
+   
           }}
+          style={planetHover === 4 ? {borderTop: "3px solid #D14C32"} : {}}
         >
           MARS
         </Link>
@@ -122,14 +102,9 @@ function Header(props: props) {
             if (props.choosePlanet === 5) {
               return;
             }
-            setTimeout(() => {
-              props.setChoosePlanet(5);
-            }, 1500);
-            props.setLeftSlide(!props.leftSlide);
-            setTimeout(() => {
-              props.setLeftSlide(false);
-            }, 1500);
+
           }}
+          style={planetHover === 5 ? {borderTop: "3px solid #D83A34"} : {}}
         >
           JUPITER
         </Link>
@@ -142,14 +117,9 @@ function Header(props: props) {
             if (props.choosePlanet === 6) {
               return;
             }
-            setTimeout(() => {
-              props.setChoosePlanet(6);
-            }, 1500);
-            props.setLeftSlide(!props.leftSlide);
-            setTimeout(() => {
-              props.setLeftSlide(false);
-            }, 1500);
+
           }}
+          style={planetHover === 6 ? {borderTop: "3px solid #CD5120"} : {}}
         >
           SATURN
         </Link>
@@ -162,14 +132,9 @@ function Header(props: props) {
             if (props.choosePlanet === 7) {
               return;
             }
-            setTimeout(() => {
-              props.setChoosePlanet(7);
-            }, 1500);
-            props.setLeftSlide(!props.leftSlide);
-            setTimeout(() => {
-              props.setLeftSlide(false);
-            }, 1500);
+
           }}
+          style={planetHover === 7 ? {borderTop: "3px solid #1EC1A2"} : {}}
         >
           URANUS
         </Link>
@@ -182,14 +147,9 @@ function Header(props: props) {
             if (props.choosePlanet === 8) {
               return;
             }
-            setTimeout(() => {
-              props.setChoosePlanet(8);
-            }, 1500);
-            props.setLeftSlide(!props.leftSlide);
-            setTimeout(() => {
-              props.setLeftSlide(false);
-            }, 1500);
+
           }}
+          style={planetHover === 8 ? {borderTop: "3px solid #2D68F0"} : {}}
         >
           NEPTUNE
         </Link>
