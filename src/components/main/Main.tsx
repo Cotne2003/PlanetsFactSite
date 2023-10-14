@@ -23,18 +23,75 @@ function Main(props: props) {
           <p
             className={planetAbout === 1 ? "clicked-mobile" : ""}
             onClick={() => setPlanetAbout(1)}
+            style={
+              params.planet === "mercury" && planetAbout === 1
+                ? { borderBottom: "3px solid #419EBB" }
+                : params.planet === "venus" && planetAbout === 1
+                ? { borderBottom: "3px solid #EDA249" }
+                : params.planet === "earth" && planetAbout === 1
+                ? { borderBottom: "3px solid #6D2ED5" }
+                : params.planet === "mars" && planetAbout === 1
+                ? { borderBottom: "3px solid #D14C32" }
+                : params.planet === "jupiter" && planetAbout === 1
+                ? { borderBottom: "3px solid #D83A34" }
+                : params.planet === "saturn" && planetAbout === 1
+                ? { borderBottom: "3px solid #CD5120" }
+                : params.planet === "uranus" && planetAbout === 1
+                ? { borderBottom: "3px solid #1EC1A2" }
+                : params.planet === "neptune" && planetAbout === 1
+                ? { borderBottom: "3px solid #2D68F0" }
+                : {}
+            }
           >
             OVERVIEW
           </p>
           <p
             className={planetAbout === 2 ? "clicked-mobile" : ""}
             onClick={() => setPlanetAbout(2)}
+            style={
+              params.planet === "mercury" && planetAbout === 2
+                ? { borderBottom: "3px solid #419EBB" }
+                : params.planet === "venus" && planetAbout === 2
+                ? { borderBottom: "3px solid #EDA249" }
+                : params.planet === "earth" && planetAbout === 2
+                ? { borderBottom: "3px solid #6D2ED5" }
+                : params.planet === "mars" && planetAbout === 2
+                ? { borderBottom: "3px solid #D14C32" }
+                : params.planet === "jupiter" && planetAbout === 2
+                ? { borderBottom: "3px solid #D83A34" }
+                : params.planet === "saturn" && planetAbout === 2
+                ? { borderBottom: "3px solid #CD5120" }
+                : params.planet === "uranus" && planetAbout === 2
+                ? { borderBottom: "3px solid #1EC1A2" }
+                : params.planet === "neptune" && planetAbout === 2
+                ? { borderBottom: "3px solid #2D68F0" }
+                : {}
+            }
           >
             STRUCTURE
           </p>
           <p
             className={planetAbout === 3 ? "clicked-mobile" : ""}
             onClick={() => setPlanetAbout(3)}
+            style={
+              params.planet === "mercury" && planetAbout === 3
+                ? { borderBottom: "3px solid #419EBB" }
+                : params.planet === "venus" && planetAbout === 3
+                ? { borderBottom: "3px solid #EDA249" }
+                : params.planet === "earth" && planetAbout === 3
+                ? { borderBottom: "3px solid #6D2ED5" }
+                : params.planet === "mars" && planetAbout === 3
+                ? { borderBottom: "3px solid #D14C32" }
+                : params.planet === "jupiter" && planetAbout === 3
+                ? { borderBottom: "3px solid #D83A34" }
+                : params.planet === "saturn" && planetAbout === 3
+                ? { borderBottom: "3px solid #CD5120" }
+                : params.planet === "uranus" && planetAbout === 3
+                ? { borderBottom: "3px solid #1EC1A2" }
+                : params.planet === "neptune" && planetAbout === 3
+                ? { borderBottom: "3px solid #2D68F0" }
+                : {}
+            }
           >
             SURFACE
           </p>
