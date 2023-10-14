@@ -134,18 +134,75 @@ function Main(props: props) {
             <button
               className={planetAbout === 1 ? "clicked" : ""}
               onClick={() => setPlanetAbout(1)}
+              style={
+                params.planet === "mercury" && planetAbout === 1
+                  ? { backgroundColor: "#419EBB" }
+                  : params.planet === "venus" && planetAbout === 1
+                  ? { backgroundColor: "#EDA249" }
+                  : params.planet === "earth" && planetAbout === 1
+                  ? { backgroundColor: "#6D2ED5" }
+                  : params.planet === "mars" && planetAbout === 1
+                  ? { backgroundColor: "#D14C32" }
+                  : params.planet === "jupiter" && planetAbout === 1
+                  ? { backgroundColor: "#D83A34" }
+                  : params.planet === "saturn" && planetAbout === 1
+                  ? { backgroundColor: "#CD5120" }
+                  : params.planet === "uranus" && planetAbout === 1
+                  ? { backgroundColor: "#1EC1A2" }
+                  : params.planet === "neptune" && planetAbout === 1
+                  ? { backgroundColor: "#2D68F0" }
+                  : {}
+              }
             >
               <span>01</span>OVERVIEW
             </button>
             <button
               className={planetAbout === 2 ? "clicked" : ""}
               onClick={() => setPlanetAbout(2)}
+              style={
+                params.planet === "mercury" && planetAbout === 2
+                  ? { backgroundColor: "#419EBB" }
+                  : params.planet === "venus" && planetAbout === 2
+                  ? { backgroundColor: "#EDA249" }
+                  : params.planet === "earth" && planetAbout === 2
+                  ? { backgroundColor: "#6D2ED5" }
+                  : params.planet === "mars" && planetAbout === 2
+                  ? { backgroundColor: "#D14C32" }
+                  : params.planet === "jupiter" && planetAbout === 2
+                  ? { backgroundColor: "#D83A34" }
+                  : params.planet === "saturn" && planetAbout === 2
+                  ? { backgroundColor: "#CD5120" }
+                  : params.planet === "uranus" && planetAbout === 2
+                  ? { backgroundColor: "#1EC1A2" }
+                  : params.planet === "neptune" && planetAbout === 2
+                  ? { backgroundColor: "#2D68F0" }
+                  : {}
+              }
             >
               <span>02</span>INTERNAL STRUCTURE
             </button>
             <button
               className={planetAbout === 3 ? "clicked" : ""}
               onClick={() => setPlanetAbout(3)}
+              style={
+                params.planet === "mercury" && planetAbout === 3
+                  ? { backgroundColor: "#419EBB" }
+                  : params.planet === "venus" && planetAbout === 3
+                  ? { backgroundColor: "#EDA249" }
+                  : params.planet === "earth" && planetAbout === 3
+                  ? { backgroundColor: "#6D2ED5" }
+                  : params.planet === "mars" && planetAbout === 3
+                  ? { backgroundColor: "#D14C32" }
+                  : params.planet === "jupiter" && planetAbout === 3
+                  ? { backgroundColor: "#D83A34" }
+                  : params.planet === "saturn" && planetAbout === 3
+                  ? { backgroundColor: "#CD5120" }
+                  : params.planet === "uranus" && planetAbout === 3
+                  ? { backgroundColor: "#1EC1A2" }
+                  : params.planet === "neptune" && planetAbout === 3
+                  ? { backgroundColor: "#2D68F0" }
+                  : {}
+              }
             >
               <span>03</span>SURFACE GEOLOGY
             </button>
