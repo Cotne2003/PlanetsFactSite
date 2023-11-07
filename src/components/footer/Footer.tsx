@@ -1,6 +1,12 @@
 import "./Footer.css";
 import FooterDiv from "./FooterDiv";
-import { footerProps } from "../DATA";
+
+type footerProps = {
+  rotationDescription: string | undefined;
+  revolutionDescription: string | undefined;
+  radiusDescription: string | undefined;
+  averageDescription: string | undefined;
+};
 
 function Footer(props: footerProps) {
   return (

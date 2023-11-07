@@ -1,8 +1,8 @@
 import "./FooterDiv.css";
 
 interface props {
-  title: string;
-  description: string;
+  title: string | undefined;
+  description: string | undefined;
 }
 
 function FooterDiv(props: props) {
